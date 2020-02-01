@@ -1,5 +1,12 @@
 import cv2
 import numpy as np
+from firebase import firebase
+
+
+fb = firebase.FirebaseApplication("https://safeskate-499c0.firebaseio.com/", None)
+data = {
+	'Obstruction' : 'true'
+}
 
 cap = cv2.VideoCapture(0)
 # fgbg = cv2.bgsegm.createBackgroundSubtractorMOG() # bg mask
@@ -23,7 +30,10 @@ while True:
 	if(contours):
 		print("Collision detected: ",j)
 		j += 1
-		
+		fb.put('/safeskate-499c0/obs_table', 'obstruction', 1)
+	else:
+		fb.put('/safeskate-499c0/obs_table', 'obstruction', 0)
+
 	# Display
 	cv2.imshow('Normal',frame)
 	cv2.imshow("Thresh",thresh)
@@ -36,6 +46,7 @@ while True:
 		break
 
 
+fb.put('/safeskate-499c0/obs_table', 'obstruction', 0)
 # release everything afterwards
 cap.release()
 cv2.destroyAllWindows()
