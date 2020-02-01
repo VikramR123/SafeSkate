@@ -2,6 +2,6 @@ from firebase import firebase
 
 fb = firebase.FirebaseApplication("https://safeskate-499c0.firebaseio.com/", None)
 
-res = fb.get('/safeskate-499c0/test', '')
+res = fb.get('/safeskate-499c0/obs_table', '')
 
 print(res)
