@@ -4,9 +4,6 @@ from firebase import firebase
 
 
 fb = firebase.FirebaseApplication("https://safeskate-499c0.firebaseio.com/", None)
-data = {
-	'Obstruction' : 'true'
-}
 
 cap = cv2.VideoCapture(0)
 # fgbg = cv2.bgsegm.createBackgroundSubtractorMOG() # bg mask
