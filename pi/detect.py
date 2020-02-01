@@ -10,27 +10,24 @@ while True:
 	# Read by frame
 	_, frame = cap.read()
 	gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-	flag, thresh = cv2.threshold(gray, 120, 255, cv2.THRESH_BINARY) # flag is useless
+
+	# threshold(param, thresh_val, fill_color, type)
+	_, thresh = cv2.threshold(gray, 150, 225, cv2.THRESH_BINARY)
 
 
 	# Find contours
 	contours, _ = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-	contours = sorted(contours, key=cv2.contourArea,reverse=True)
-	# Select long perimeters only
-	perimeters = [cv2.arcLength(contours[i],True) for i in range(len(contours))]
-	listindex=[i for i in range(15) if perimeters[i]>perimeters[0]/2]
-	numcards=len(listindex)
+	# filter out the small ones
+	contours = [c for c in contours if cv2.contourArea(c) > 10000]
 
 	# Display
 	cv2.imshow('Normal',frame)
 	cv2.imshow("Gray",gray)
 	cv2.imshow("Thresh",thresh)
 
-	copy = frame.copy()
-	[cv2.drawContours(copy, [contours[i]], 0, (0,255,0), 5) for i in listindex]
-	cv2.imshow("Contours", copy)
-	
-
+	for i in range(len(contours)):
+		cv2.drawContours(frame, [contours[i]], 0, (0,255,0), 5)
+	cv2.imshow("Contours", frame)
 
 	if cv2.waitKey(50) == ord('q'):
 		break
