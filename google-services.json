@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "37622349120",
+    "firebase_url": "https://safeskate-499c0.firebaseio.com",
+    "project_id": "safeskate-499c0",
+    "storage_bucket": "safeskate-499c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37622349120:android:8d9d5668328b1a9ef24ea5",
+        "android_client_info": {
+          "package_name": "com.hack.safeskate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37622349120-38shoqpsq3m5ft3t8vcodklqkq4dieke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9ftyxmvPfnGi0Uv3_nCIdfA9_1wVsweM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37622349120-38shoqpsq3m5ft3t8vcodklqkq4dieke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
