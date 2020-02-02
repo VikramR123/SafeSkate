@@ -29,8 +29,7 @@ This footage is analyzed in real-time using computer vision via OpenCV on a Rasp
 If any object large enough to interfere your skating is detected, the backend script updates
 a boolean value on Firebase to denote that an obstruction exists. 
 
-Our frontend (usually a phone) continuously fetches from this database and warns the user with 
-a sound if an obstruction is detected.
+Our frontend (we hope to integrate this into the remote for electric skateboards, but for now ran on your phone) continuously fetches from this database and warns the user with a sound if an obstruction is detected.
 
 
 ## Technologies Used
