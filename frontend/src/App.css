@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.detector {
+    margin: 200px 100px;
+    text-align: center;
+    padding: 20px;
+    background-color: lightgrey;
+}
+
+.detectorImg {
+    font-size: 100px;
+    margin: 15px;
+}
+
+.danger {
+    color: red;
+}
+
+.nodanger {
+    color: #4BCA81;
+}
