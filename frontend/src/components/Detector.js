@@ -1,44 +1,57 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import { faExclamationCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { Howl, Howler } from 'howler';
 
 class Detector extends Component {
 
     constructor(props) {
         super(props);
+        this.audio = new Howl({
+            src: ['../beep1.mp3'],
+            volume: 0.5,
+
+        });
         this.state = {
             'detected' : 0,
             'firebase' : firebase.initializeApp({
                 'databaseURL': 'https://safeskate-499c0.firebaseio.com/'
             })
         };
+        
     }
 
     componentDidMount() {
         let ref = this.state.firebase.database().ref("safeskate-499c0/obs_table");
         ref.once("value").then(snap => {
             this.setState((state, props) => ({ 
-                detected: 0 
+                detected: snap.val().obstruction
             }));
             console.log(this.state.detected);
         }).catch(error => {
             console.log("error".error);
         })
 
-        setInterval(() => this.tick(), 1000);
+        setInterval(() => this.tick(), 200);
     }
 
     tick() {
         let ref = this.state.firebase.database().ref("safeskate-499c0/obs_table");
+        
+        if (!this.state.detected) {
+            this.audio.play();
+        }
+
         ref.once("value").then(snap => {
             this.setState((state, props) => ({ 
-                detected: snap.val().obstruction 
+                detected: snap.val().obstruction
             }));
             console.log(this.state.detected);
         }).catch(error => {
             console.log("error".error);
-        })
+        });
+
     }
 
     render() {
@@ -47,8 +60,8 @@ class Detector extends Component {
             : "Obstruction detected!"
 
         let image = 
-            !this.state.detected ? <FontAwesomeIcon className="detectorImg nodanger" icon={faExclamationTriangle}/>
-            : <FontAwesomeIcon className="detectorImg danger" icon={faExclamationTriangle}/>
+            !this.state.detected ? <FontAwesomeIcon className="detectorImg nodanger" icon={faCheckCircle}/>
+            : <FontAwesomeIcon className="detectorImg danger" icon={faExclamationCircle}/>
 
         return (
             <div className="detector">
