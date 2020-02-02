@@ -4,6 +4,8 @@ Computer Vision/IoT project for HackUCI 2020
 
 Skate safer with SafeSkate!
 
+[Demo Video](https://www.youtube.com/watch?v=w_BOa3vBQ0U)
+
 
 ## What it does
 
