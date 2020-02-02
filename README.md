@@ -16,7 +16,8 @@ Alerts skater of objects on the road that may cause a fall
 
 Backend:
 
-* OpenCV-Python
+* Python
+* OpenCV
 * numpy
 * Firebase
 
