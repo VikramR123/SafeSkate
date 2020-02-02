@@ -20,6 +20,7 @@ Backend:
 * OpenCV
 * numpy
 * Firebase
+* Raspberry Pi
 
 Frontend:
 
