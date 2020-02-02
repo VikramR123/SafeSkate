@@ -4,7 +4,17 @@ function Introduction() {
     return (
         <div className="jumbotron">
             <h1 className="display-4">Skate safer with SafeSkate!</h1>
-            <p className="lead">Below is a live feed of whether or not the front of your board is obstructed.</p>
+            <h2 className="lead">Below is a live feed of whether or not the front of your board is obstructed.</h2>
+            <ul className="tech">
+                <li>#ComputerVision</li>
+                <li>#MachineLearning</li>
+                <li>#IoT</li>
+                <li>#OpenCV</li>
+                <li>#Firebase</li>
+                <li>#RaspberryPi</li>
+                <li>#numpy</li>
+                <li>#ReactJS</li>
+            </ul>
         </div>
     );
 }

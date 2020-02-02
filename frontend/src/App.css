@@ -9,16 +9,23 @@ body {
 }
 
 .logo {
-    margin: 15px;
-    width: 200px;
+    margin: 10px;
+    width: 100px;
 }
 
 .jumbotron {
     padding: 50px;
     background-color: #e84118;
     color: #f9f9f9;
-    margin-top: 50px;
+    margin-top: 10px;
 }
+
+.tech li{
+    display: inline;
+    margin-right: 15px;
+    color: lightgray;
+}
+
 .detector {
     margin: 100px 100px;
     text-align: center;
