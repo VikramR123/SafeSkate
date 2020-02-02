@@ -23,6 +23,7 @@ while True:
 	if contours:
 		# update database
 		fb.put('/safeskate-499c0/obs_table', 'obstruction', 1)
+
 	else:
 		# update database
 		fb.put('/safeskate-499c0/obs_table', 'obstruction', 0)
