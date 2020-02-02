@@ -1,18 +1,35 @@
 body {
     margin: 0;
     padding: 0;
-
+    background-color: #f9f9f9;
 }
 
+.navbar {
+    padding: 10px;
+}
+
+.logo {
+    margin: 15px;
+    width: 200px;
+}
+
+.jumbotron {
+    padding: 50px;
+    background-color: #e84118;
+    color: #f9f9f9;
+    margin-top: 50px;
+}
 .detector {
-    margin: 200px 100px;
+    margin: 100px 100px;
     text-align: center;
-    padding: 20px;
-    background-color: lightgrey;
+    padding: 30px;
+    color: white;
+    background-color: #273c75; /* #e84118 */
+    border-radius: 30px;
 }
 
 .detectorImg {
-    font-size: 100px;
+    font-size: 150px;
     margin: 15px;
 }
 
