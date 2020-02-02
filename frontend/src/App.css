@@ -20,8 +20,12 @@ body {
     margin-top: 10px;
 }
 
+.tech {
+    margin-left: -38px;
+}
+
 .tech li{
-    display: inline;
+    display: inline-block;
     margin-right: 15px;
     color: lightgray;
 }
