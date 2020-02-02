@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-import subprocess
 from firebase import firebase
 
 
@@ -24,7 +23,7 @@ while True:
 	if contours:
 		# update database
 		fb.put('/safeskate-499c0/obs_table', 'obstruction', 1)
-		p = subprocess.Popen(["afplay", "beep.mp3"])
+
 	else:
 		# update database
 		fb.put('/safeskate-499c0/obs_table', 'obstruction', 0)
