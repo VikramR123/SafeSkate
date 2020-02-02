@@ -38,6 +38,8 @@ Object detection is done with recognizing contours. Contours can be explained si
 
 Our backend script processes the video footage in real-time looking for contours to detect objects in the way.
 
+The images below show what the camera is seeing and detecting. Normal(left) vs Contour Detection(right)
+
 <img src="photos/model2.PNG">
 <img src="photos/model3.PNG">
 
