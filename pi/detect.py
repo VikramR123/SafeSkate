@@ -30,7 +30,6 @@ while True:
 
 	# Display
 	cv2.imshow('Normal',frame)
-	cv2.imshow("Thresh",thresh)
 
 	for i in range(len(contours)):
 		cv2.drawContours(frame, [contours[i]], 0, (50,50,255), 5)
