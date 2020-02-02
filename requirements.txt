@@ -1,5 +1,4 @@
 opencv-python
-picamera
 python-firebase
 python_jwt
 gcloud
