@@ -32,6 +32,16 @@ a boolean value on Firebase to denote that an obstruction exists.
 Our frontend (we hope to integrate this into the remote for electric skateboards, but for now ran on your phone) continuously fetches from this database and warns the user with a sound if an obstruction is detected.
 
 
+## Object Detection
+
+Object detection is done with recognizing contours. Contours can be explained simply as a curve joining all the continuous points (along the boundary), having same color or intensity. 
+
+Our backend script processes the video footage in real-time looking for contours to detect objects in the way.
+
+<img src="photos/model2.PNG">
+<img src="photos/model3.PNG">
+
+
 ## Technologies Used
 
 Backend:
