@@ -10,8 +10,8 @@ class Navbar extends Component {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <ul className="collapse navbar-collapse navbar-nav" id="navbarSupportedContent">
-                <li className="nav-link">Devpost</li>
-                <li className="nav-link">Github</li>
+                <li className="nav-link"><a target="_blank" rel="noopener noreferrer" href="https://devpost.com/software/safeskate">Devpost</a></li>
+                <li className="nav-link"><a target="_blank" rel="noopener noreferrer" href="https://github.com/tommyli3318/SafeSkate">Github</a></li>
             </ul>
             </nav>
         )

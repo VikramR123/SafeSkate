@@ -7,7 +7,6 @@ function Introduction() {
             <h2 className="lead">Below is a live feed of whether or not the front of your board is obstructed.</h2>
             <ul className="tech">
                 <li>#ComputerVision</li>
-                <li>#MachineLearning</li>
                 <li>#IoT</li>
                 <li>#OpenCV</li>
                 <li>#Firebase</li>

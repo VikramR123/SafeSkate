@@ -9,9 +9,28 @@ body {
     padding: 10px;
 }
 
+.nav-link {
+    background-color: rgba(39,60,117, 0.95);
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    background-color: #e84118;
+    transition: 0.2s;
+}
+
+.nav-link a {
+    color: white;
+}
+
+
 .logo {
     margin: 10px;
-    width: 100px;
+    width: 150px;
 }
 
 .jumbotron {
@@ -45,7 +64,7 @@ body {
 
 .detector {
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 15px;
     z-index: 1;
     width: 95%;
     text-align: center;
