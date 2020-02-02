@@ -16,12 +16,12 @@ body {
 
 .jumbotron {
     z-index: -1;
-    top: 75px;
+    top: 60px;
     position: relative;
     padding: 50px;
     background-color: #e84118;
     color: #f9f9f9;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .display-4 {
@@ -44,13 +44,14 @@ body {
 }
 
 .detector {
+    margin: 0 auto;
     border-radius: 10px;
     z-index: 1;
     width: 95%;
     text-align: center;
     padding: 30px;
     color: white;
-    background-color: #273c75; /* #e84118 */
+    background-color: rgba(39,60,117, 0.95); /* #e84118 */
 }
 
 .detector h3 {

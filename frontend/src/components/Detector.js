@@ -3,6 +3,7 @@ import * as firebase from 'firebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import ReactHowler from 'react-howler';
+import beep from '../beep.mp3';
 
 class Detector extends Component {
 
@@ -13,6 +14,7 @@ class Detector extends Component {
             'firebase' : firebase.initializeApp({
                 'databaseURL': 'https://safeskate-499c0.firebaseio.com/'
             }),
+            'playing': false
         };
         
     }
@@ -32,10 +34,14 @@ class Detector extends Component {
 
     tick() {
         let ref = this.state.firebase.database().ref("safeskate-499c0/obs_table");
-        
-        if (this.state.detected) {
 
+        if (this.state.detected) {
+            this.setState({playing:true});
+        } else {
+            this.setState({playing:false});
         }
+
+        // this.setState({playing:false});
 
         ref.once("value").then(snap => {
             this.setState((state, props) => ({ 
@@ -60,8 +66,8 @@ class Detector extends Component {
         return (
             <React.Fragment>
                 <ReactHowler
-                    src='../beep1.mp3'
-                    playing={true}
+                    src={beep}
+                    playing={this.state.playing}
                     loop ={true}
                 />
                 <div className="detector">
