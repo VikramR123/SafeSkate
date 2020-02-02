@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    font-family: "Source Sans Pro";
 }
 
 .navbar {
@@ -14,14 +15,26 @@ body {
 }
 
 .jumbotron {
+    z-index: -1;
+    top: 75px;
+    position: relative;
     padding: 50px;
     background-color: #e84118;
     color: #f9f9f9;
     margin-top: 10px;
 }
 
+.display-4 {
+    font-weight: 700;
+}
+
+.lead {
+    font-size: 1.5rem;
+}
+
 .tech {
     margin-left: -38px;
+    margin-top: 20px;
 }
 
 .tech li{
@@ -31,12 +44,18 @@ body {
 }
 
 .detector {
-    margin: 100px 100px;
+    border-radius: 10px;
+    z-index: 1;
+    width: 95%;
     text-align: center;
     padding: 30px;
     color: white;
     background-color: #273c75; /* #e84118 */
-    border-radius: 30px;
+}
+
+.detector h3 {
+    font-weight: 700;
+    font-size: 2.4rem;
 }
 
 .detectorImg {

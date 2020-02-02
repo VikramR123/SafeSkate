@@ -2,22 +2,17 @@ import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { Howl, Howler } from 'howler';
+import ReactHowler from 'react-howler';
 
 class Detector extends Component {
 
     constructor(props) {
         super(props);
-        this.audio = new Howl({
-            src: ['../beep1.mp3'],
-            volume: 0.5,
-
-        });
         this.state = {
             'detected' : 0,
             'firebase' : firebase.initializeApp({
                 'databaseURL': 'https://safeskate-499c0.firebaseio.com/'
-            })
+            }),
         };
         
     }
@@ -32,15 +27,14 @@ class Detector extends Component {
         }).catch(error => {
             console.log("error".error);
         })
-
         setInterval(() => this.tick(), 200);
     }
 
     tick() {
         let ref = this.state.firebase.database().ref("safeskate-499c0/obs_table");
         
-        if (!this.state.detected) {
-            this.audio.play();
+        if (this.state.detected) {
+
         }
 
         ref.once("value").then(snap => {
@@ -64,10 +58,18 @@ class Detector extends Component {
             : <FontAwesomeIcon className="detectorImg danger" icon={faExclamationCircle}/>
 
         return (
-            <div className="detector">
-                {image}
-                <h3>{detectedMessage}</h3>
-            </div>
+            <React.Fragment>
+                <ReactHowler
+                    src='../beep1.mp3'
+                    playing={true}
+                    loop ={true}
+                />
+                <div className="detector">
+                    {image}
+                    <h3>{detectedMessage}</h3>
+                </div>
+            </React.Fragment>
+            
         )
     }
 }
