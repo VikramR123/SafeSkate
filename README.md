@@ -46,12 +46,14 @@ The images below show what the camera is seeing and detecting. Normal(left) vs C
 
 ## Front End
 
-<img src="photos/frontend1.jpg">
 No object detected
+<img src="photos/frontend1.jpg">
 
+<br><br>
 
-<img src="photos/frontend2.jpg">
 The frontend changes when something is detected (Beeping simultaneously)
+<img src="photos/frontend2.jpg">
+
 
 
 ## Technologies Used
