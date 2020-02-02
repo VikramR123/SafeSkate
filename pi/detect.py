@@ -13,7 +13,7 @@ while True:
 	gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
 
 	# threshold(param, thresh_val, fill_color, type)
-	_, thresh = cv2.threshold(gray, 100, 225, cv2.THRESH_BINARY)
+	_, thresh = cv2.threshold(gray, 150, 225, cv2.THRESH_BINARY)
 
 
 	# Find contours
