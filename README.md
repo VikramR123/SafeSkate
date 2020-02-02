@@ -1,6 +1,7 @@
 # SafeSkate
 
 IoT project for HackUCI 2020
+
 Skate safer with SafeSkate!
 
 
