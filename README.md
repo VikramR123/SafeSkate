@@ -45,8 +45,8 @@ The images below show what the camera is seeing and detecting. Normal(left) vs C
 
 
 ## Front End
-<img src="photos/frontend1.PNG">
-<img src="photos/frontend2.PNG">
+<img src="photos/frontend1.jpg">
+<img src="photos/frontend2.jpg">
 
 
 ## Technologies Used
