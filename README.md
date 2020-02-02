@@ -1,13 +1,13 @@
 # SafeSkate
 
-IoT project for HackUCI 2020
+Computer Vision/IoT project for HackUCI 2020
 
 Skate safer with SafeSkate!
 
 
 ## What it does
 
-Real-time detection of obstructions for skareboards via the use of a camera
+Real-time detection of obstructions for skareboards via computer vision
 
 Alerts skater of objects on the road that may cause a fall
 
@@ -24,6 +24,7 @@ Backend:
 Frontend:
 
 * React.js
+* HTML/CSS
 
 
 ## Install Dependencies
